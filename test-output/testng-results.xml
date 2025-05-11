@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-11T12:48:26 IST" name="Regression Suite" finished-at="2025-05-11T12:49:49 IST" duration-ms="83032">
+    <groups>
+      <group name="regressionOne">
+        <method signature="TestScript.userOnboardsNodes()[pri:2, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userOnboardsNodes" class="XaltsAutomationFramework.TestScript"/>
+        <method signature="TestScript.userLaunchOcnNetwork()[pri:3, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userLaunchOcnNetwork" class="XaltsAutomationFramework.TestScript"/>
+        <method signature="TestScript.userSignsOut()[pri:4, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userSignsOut" class="XaltsAutomationFramework.TestScript"/>
+      </group> <!-- regressionOne -->
+      <group name="regression">
+        <method signature="TestScript.userSignsUp()[pri:1, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userSignsUp" class="XaltsAutomationFramework.TestScript"/>
+        <method signature="TestScript.userOnboardsNodes()[pri:2, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userOnboardsNodes" class="XaltsAutomationFramework.TestScript"/>
+        <method signature="TestScript.userLaunchOcnNetwork()[pri:3, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userLaunchOcnNetwork" class="XaltsAutomationFramework.TestScript"/>
+        <method signature="TestScript.userSignsOut()[pri:4, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" name="userSignsOut" class="XaltsAutomationFramework.TestScript"/>
+      </group> <!-- regression -->
+    </groups>
+    <test started-at="2025-05-11T12:48:26 IST" name="Regression Tests" finished-at="2025-05-11T12:49:49 IST" duration-ms="83032">
+      <class name="XaltsAutomationFramework.TestScript">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:48:26 IST" name="launchApplication" finished-at="2025-05-11T12:48:37 IST" duration-ms="11718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="userSignsUp()[pri:1, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:48:37 IST" name="userSignsUp" finished-at="2025-05-11T12:49:00 IST" duration-ms="22088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userSignsUp -->
+        <test-method signature="userOnboardsNodes()[pri:2, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:49:00 IST" name="userOnboardsNodes" finished-at="2025-05-11T12:49:39 IST" duration-ms="39206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userOnboardsNodes -->
+        <test-method signature="userLaunchOcnNetwork()[pri:3, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:49:39 IST" name="userLaunchOcnNetwork" finished-at="2025-05-11T12:49:48 IST" duration-ms="9014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLaunchOcnNetwork -->
+        <test-method signature="userSignsOut()[pri:4, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:49:48 IST" name="userSignsOut" finished-at="2025-05-11T12:49:49 IST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userSignsOut -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:XaltsAutomationFramework.TestScript@4b29d1d2]" started-at="2025-05-11T12:49:49 IST" name="quitDriver" finished-at="2025-05-11T12:49:49 IST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- XaltsAutomationFramework.TestScript -->
+    </test> <!-- Regression Tests -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

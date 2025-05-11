@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegressionOne Suite">
+  <test name="RegressionOne Tests">
+    <groups>
+      <run>
+        <include name="regressionOne"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="XaltsAutomationFramework.TestScript"/>
+    </classes>
+  </test>
+</suite>
