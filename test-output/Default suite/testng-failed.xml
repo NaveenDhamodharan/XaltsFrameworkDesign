@@ -5,9 +5,10 @@
     <classes>
       <class name="XaltsAutomationFramework.TestScript">
         <methods>
-          <include name="userOnboardsNodes"/>
-          <include name="signInAndNavigateTest"/>
-          <include name="userLaunchOcnNetwork"/>
+          <include name="userSignsInWithInvalidCredentials"/>
+          <include name="tearDownExtent"/>
+          <include name="setupExtent"/>
+          <include name="createTest"/>
           <include name="launchApplication"/>
           <include name="quitDriver"/>
         </methods>

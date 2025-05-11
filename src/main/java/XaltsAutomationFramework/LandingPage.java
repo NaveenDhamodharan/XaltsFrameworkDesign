@@ -1,7 +1,11 @@
 package XaltsAutomationFramework;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LandingPage extends ReusableMethods{
 	
@@ -55,11 +59,7 @@ public class LandingPage extends ReusableMethods{
 	}
 
 	public boolean userSignsUp(String userId, String password) {
-		driver.findElement(bySignInButtonXpath).click();
-		driver.findElement(byEmailInputXpath).sendKeys(userId);
-		driver.findElement(byPasswordInputXpath).sendKeys(password);
-		driver.findElement(byConfirmPasswordInputXpath).sendKeys(password);
-		driver.findElement(bySignUpButtonXpath).click();
+		this.performSignUp(userId, password);
 		waitTillElementIsPresent(byGetStartedButtonCssSelector);
 		driver.findElement(byGetStartedButtonCssSelector).click();
 		return driver.findElement(byGetStartedTextXpath).isDisplayed();
@@ -67,5 +67,22 @@ public class LandingPage extends ReusableMethods{
 
 	public boolean isSignedIn() {
 		return driver.findElement(bySignOutButtonXpath).isDisplayed();
+	}
+	
+	public String userTriesToSignUpWithExistingUser(String userId, String password) {
+		this.performSignUp(userId, password);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.alertIsPresent());
+		String textInAlert = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		return textInAlert;
+	}
+	
+	private void performSignUp(String userId, String password) {
+	    driver.findElement(bySignInButtonXpath).click();
+	    driver.findElement(byEmailInputXpath).sendKeys(userId);
+	    driver.findElement(byPasswordInputXpath).sendKeys(password);
+	    driver.findElement(byConfirmPasswordInputXpath).sendKeys(password);
+	    driver.findElement(bySignUpButtonXpath).click();
 	}
 }

@@ -53,7 +53,7 @@ public class TestScript extends InvokeBrowser {
 
 	@Test(priority = 2, groups = { "regression", "regressionOne" })
 	public void userOnboardsNodes() {
-		ensureSignedIn();
+		this.ensureSignedIn();
 		onboardOcnNodePage = landingPage.userClicksOnOnboardOCNNode();
 		boolean isNodeIdAddedSuccessfully = onboardOcnNodePage.userProvidesNodeDetails(nodeId, publicIp);
 		Assert.assertEquals(isNodeIdAddedSuccessfully, true, "Node ID was not added successfully");
@@ -66,7 +66,7 @@ public class TestScript extends InvokeBrowser {
 
 	@Test(priority = 3, groups = { "regression", "regressionOne" })
 	public void userLaunchOcnNetwork() {
-		ensureSignedIn();
+		this.ensureSignedIn();
 		launchOCNNetworkPage = landingPage.userClicksOnLaunchOCNNetwork();
 		launchOCNNetworkPage.userProvidesNetworkDetails(networkName, walletAddress, nodeId, publicIp);
 		String[] addedNetworks = launchOCNNetworkPage.userSubmitsNode(nodeId);
@@ -86,5 +86,11 @@ public class TestScript extends InvokeBrowser {
 			boolean isUserSignedIn = landingPage.userSignsIn(userId, password);
 			Assert.assertTrue(isUserSignedIn, "User not able to sign in before proceeding");
 		}
+	}
+	
+	@Test(groups = "negativeTest")
+	public void userSignsInWithInvalidCredentials() {
+		String textInAlert = landingPage.userTriesToSignUpWithExistingUser(userId, password);
+		Assert.assertEquals(textInAlert, "Alert is not displayed when attempting to sign up with an already registered email.");
 	}
 }
